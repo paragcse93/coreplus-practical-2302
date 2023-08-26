@@ -24,7 +24,8 @@ To Run API Project run follwoing command -
 dotnet run
 ```
 
-_Note: Emphasis has been placed on prioritizing functionality over the visual design within the UI project._
+> [!_Note]
+> Emphasis has been placed on prioritizing functionality over the visual design within the UI project.\_.
 
 # Bussiness Logic:-
 
@@ -32,13 +33,17 @@ _Note: Emphasis has been placed on prioritizing functionality over the visual de
 
 ### For Supervisor
 
+```bash
 **GET /practitioners/supervisorsPractitioners**
+```
 
 Supervisor List is displayed in the Top Left Portion of the UI.
 
 ### For Other Practitioners
 
-**GET /practitioners/otherpractitioners**
+```bash
+GET /practitioners/otherpractitioners
+```
 
 Other Practitioners List is displayed in the Bottom Left Portion of the UI.
 
@@ -54,7 +59,12 @@ This will generate the **Cost and Revenue Summary Report** on the bottom left si
 
 **API Details:**
 
-- Endpoint: **POST /appointments/summarybydate**
+- Endpoint:
+
+```bash
+GET /appointments/summarybydate
+```
+
 - Parameters: `practitionerId` (Required), `startDate` (Required), `endDate` (Required)
 - Result: Monthly total revenue and cost for the selected practitioner within the given date range.
 
@@ -67,7 +77,12 @@ To view a detailed breakdown of a specific practitioner's appointments:
 
 **API Details:**
 
-- Endpoint: **POST /appointments/practitionerappointmentlist**
+- Endpoint:
+
+```bash
+GET /appointments/practitionerappointmentlist
+```
+
 - Parameters: `practitionerId` (Required), `startDate` (Required), `endDate` (Required)
 - Result: Comprehensive overview of the practitioner's appointment breakdown on the right side of the UI.
 
@@ -79,7 +94,12 @@ Upon selecting an appointment from the practitioner's appointment breakdown:
 
 **API Details:**
 
-- Endpoint: **GET /appointments/appointmentdetails/**
+- Endpoint:
+
+```bash
+GET /appointments/appointmentdetails/
+```
+
 - Parameter: `appointmentId` (Required)
 
 ## Other APIs
@@ -88,7 +108,11 @@ An additional API has been implemented to retrieve a list of practitioners apart
 
 **API Details:**
 
-- Endpoint: **GET /practitioners/others/**
+- Endpoint:
+
+```bash
+GET /practitioners/others/
+```
 
 ---
 
