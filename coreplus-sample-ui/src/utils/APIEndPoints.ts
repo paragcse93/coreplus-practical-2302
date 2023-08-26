@@ -1,4 +1,4 @@
-const base_url = "https://localhost:7091";
+const base_url = " http://localhost:5279";
 
 export var APIEndPoints = {
   GetSupervisors: base_url + "/practitioners/supervisorsPractionars",
