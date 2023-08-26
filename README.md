@@ -22,9 +22,11 @@ To Run API Project run follwoing command -
 
 ```bash
 dotnet run
-
+```
 
 _Note: Emphasis has been placed on prioritizing functionality over the visual design within the UI project._
+
+# Bussiness Logic:-
 
 ## API Used for Fetching Supervisor and Other Practitioners
 
@@ -89,4 +91,7 @@ An additional API has been implemented to retrieve a list of practitioners apart
 - Endpoint: **GET /practitioners/others/**
 
 ---
+
+```
+
 ```
