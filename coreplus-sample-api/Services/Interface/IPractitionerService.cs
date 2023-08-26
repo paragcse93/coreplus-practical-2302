@@ -8,10 +8,10 @@ namespace Coreplus.Sample.Api.Services.Interface
 
 
 
-        Task<APIResponse<PractitionerDto>> GetAllPractitioners();
+        Task<APIResponse<List<PractitionerDto>>> GetAllPractitioners();
 
-        Task<APIResponse<PractitionerDto>> GetSupervisorPractitioners();
+        Task<APIResponse<List<PractitionerDto>>> GetSupervisorPractitioners();
 
-        Task<APIResponse<PractitionerDto>> GetOtherPractitioners();
+        Task<APIResponse<List<PractitionerDto>>> GetOtherPractitioners();
     }
 }

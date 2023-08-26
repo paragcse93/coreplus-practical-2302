@@ -53,9 +53,8 @@ const CostRevenueSummaryReports = ({
 
     setLoading(true);
     const response = await getAppointmentListbyDate(reportParameter);
-    //console.log(response);
+
     if (response.data) {
-      //console.log(response.data);
       if (response.data.length > 0) {
         setAppointmentList(response.data);
       } else {
@@ -65,7 +64,6 @@ const CostRevenueSummaryReports = ({
       alert("No Appointment Data Found.");
     }
     setLoading(false);
-    //console.log(reportParameter);
   };
 
   const generateReport = async (reportParameter: ReportParameters) => {
@@ -191,11 +189,12 @@ const CostRevenueSummaryReports = ({
                         {appointment.isExpanded && (
                           <>
                             <tr>
-                              <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-5">
-                                <div className="flex justify-end px-4 pt-4"></div>
-                                <div className="flex flex-col p-2">
-                                  <span className="text-sm text-gray-500 dark:text-gray-400"></span>
-                                  <td colSpan={1}>
+                              <td colSpan={1}>
+                                <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 my-5">
+                                  <div className="flex justify-end px-4 pt-4"></div>
+                                  <div className="flex flex-col p-2">
+                                    <span className="text-sm text-gray-500 dark:text-gray-400"></span>
+
                                     <dl className="max-w-md text-xs text-gray-500 divide-y divide-gray-300 dark:text-white dark:divide-gray-700">
                                       <div className="mb-2">
                                         <h6 className="text-lg font-semibold mb-1 text-center text-gray-700 dark:text-white">
@@ -226,9 +225,9 @@ const CostRevenueSummaryReports = ({
                                         </dd>
                                       </div>
                                     </dl>
-                                  </td>
+                                  </div>
                                 </div>
-                              </div>
+                              </td>
                             </tr>
                           </>
                         )}
