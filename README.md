@@ -24,8 +24,11 @@ To Run API Project run follwoing command -
 dotnet run
 ```
 
-> [!_Note]
-> Emphasis has been placed on prioritizing functionality over the visual design within the UI project.\_.
+> [!Important]
+> put dot net API URL in APIEndPoints.ts file's base_url.
+
+> [!Note]
+> Emphasis has been placed on prioritizing functionality over the visual design within the UI project.
 
 # Bussiness Logic:-
 
