@@ -53,9 +53,8 @@ const CostRevenueSummaryReports = ({
 
     setLoading(true);
     const response = await getAppointmentListbyDate(reportParameter);
-    //console.log(response);
+
     if (response.data) {
-      //console.log(response.data);
       if (response.data.length > 0) {
         setAppointmentList(response.data);
       } else {
@@ -65,7 +64,6 @@ const CostRevenueSummaryReports = ({
       alert("No Appointment Data Found.");
     }
     setLoading(false);
-    //console.log(reportParameter);
   };
 
   const generateReport = async (reportParameter: ReportParameters) => {
@@ -227,6 +225,8 @@ const CostRevenueSummaryReports = ({
                                       </div>
                                     </dl>
                                   </td>
+                                  <td></td>
+                                  <td></td>
                                 </div>
                               </div>
                             </tr>
