@@ -1,49 +1,71 @@
-# coreplus-practical-2302
+Certainly! Here's the provided information designed for a GitHub readme:
 
-Note: Emphasis has been placed on prioritizing functionality over the visual design within the UI project.
+---
 
-API used for Fetching Supervisor and Other Practitioners
-For Supervisor
-**/practitioners/supervisorsPractionars**
+# CorePlus Practical 2302
 
-In UI the Supervisor List is on Top Left Portion
+_Note: Emphasis has been placed on prioritizing functionality over the visual design within the UI project._
 
-For Other Practitioners
-**/practitioners/otherpractionars**
-In UI the Supervisor List is on Bottom Left Portion
+## API Used for Fetching Supervisor and Other Practitioners
 
-**1) Reporting**
-To generate a comprehensive Practitioners report, Select an individual From Supervisor List or Other Practitioners List. Choose a specific Start Date and End Date then click the "Generate Report" button it will generate _Cost and Revenue Summary Report_ on the bottom left side
+### For Supervisor
 
-This API involves three parameters:
-`practitionerId` (Required) , `startDate` (Required) ,`endDate` (Required)
+**GET /practitioners/supervisorsPractitioners**
 
-The API provides monthly total revenue and cost for selected practitioner with in given date range.
+Supervisor List is displayed in the Top Left Portion of the UI.
 
-**/appointments/summarybydate**
+### For Other Practitioners
 
-**2) Breakdown of Practitioner's Appointments**
-To delve into a detailed breakdown of a specific practitioner's appointments, simply click on the corresponding Practioner name _Cost and Revenue Summary Report_ table within the summary report generated in step 1.
-It will call another api
+**GET /practitioners/otherpractitioners**
 
-**/appointments/practitionerappointmentlist**
+Other Practitioners List is displayed in the Bottom Left Portion of the UI.
 
-This API requires three parameters:
+## 1) Reporting
 
-`practitionerId` (Required) , `startDate` (Required) ,`endDate` (Required)
+To generate a comprehensive Practitioners report:
 
-The API furnishes a comprehensive overview of the practitioner's appointment breakdown in right side.
+1. Select an individual from the Supervisor List or Other Practitioners List.
+2. Choose a specific Start Date and End Date.
+3. Click the "Generate Report" button.
 
-**3) Appointment Details**
-Upon selecting an appointment from practitioner's appointment breakdown , the system will present the intricate details of the chosen appointment inside the row
+This will generate the **Cost and Revenue Summary Report** on the bottom left side of the UI.
 
-This API necessitates a single parameter:
+**API Details:**
 
-1. `appointmentId` (Required)
+- Endpoint: **POST /appointments/summarybydate**
+- Parameters: `practitionerId` (Required), `startDate` (Required), `endDate` (Required)
+- Result: Monthly total revenue and cost for the selected practitioner within the given date range.
 
-**/appointments/appointmentdetails/**
+## 2) Breakdown of Practitioner's Appointments
 
-**Other APIs**
+To view a detailed breakdown of a specific practitioner's appointments:
+
+1. Click on the corresponding practitioner's name in the **Cost and Revenue Summary Report** table within the summary report.
+2. This will trigger another API call.
+
+**API Details:**
+
+- Endpoint: **POST /appointments/practitionerappointmentlist**
+- Parameters: `practitionerId` (Required), `startDate` (Required), `endDate` (Required)
+- Result: Comprehensive overview of the practitioner's appointment breakdown on the right side of the UI.
+
+## 3) Appointment Details
+
+Upon selecting an appointment from the practitioner's appointment breakdown:
+
+1. The system will present the intricate details of the chosen appointment within the corresponding row.
+
+**API Details:**
+
+- Endpoint: **GET /appointments/appointmentdetails/**
+- Parameter: `appointmentId` (Required)
+
+## Other APIs
+
 An additional API has been implemented to retrieve a list of practitioners apart from those categorized as OWNER and ADMIN.
 
-**/practitioners/others/**
+**API Details:**
+
+- Endpoint: **GET /practitioners/others/**
+
+---
