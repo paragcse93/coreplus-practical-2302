@@ -46,7 +46,7 @@ const OtherPractitionerList = ({
 
         <input
           type="text"
-          placeholder="Search supervisors..."
+          placeholder="Search..."
           className="block w-full p-2 mt-2 rounded-lg border border-gray-300 focus:ring-0 focus:border-primary dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
           onChange={(event) => onFilterChange(event.target.value)}
         />
