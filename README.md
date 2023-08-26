@@ -1,8 +1,28 @@
-Certainly! Here's the provided information designed for a GitHub readme:
-
----
-
 # CorePlus Practical 2302
+
+## Pre-requisites
+
+coreplus-sample-api require DotNet 7 to run
+
+## Installing Npm Packages
+
+To install the npm packages run -
+
+```bash
+npm i
+```
+
+To Run UI Project run following command -
+
+```bash
+npm run dev
+```
+
+To Run API Project run follwoing command -
+
+```bash
+dotnet run
+
 
 _Note: Emphasis has been placed on prioritizing functionality over the visual design within the UI project._
 
@@ -69,3 +89,4 @@ An additional API has been implemented to retrieve a list of practitioners apart
 - Endpoint: **GET /practitioners/others/**
 
 ---
+```
